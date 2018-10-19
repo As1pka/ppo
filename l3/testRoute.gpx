@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gpx version="1.0" creator="GPS Visualizer http://www.gpsvisualizer.com/" xmlns="http://www.topografix.com/GPX/1/0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/GPX/1/0/gpx.xsd">
+<wpt lat="46.8378493" lon="-114.0364298">
+  <ele>965.1</ele>
+  <name>46.8378493,-114.0364298</name>
+  <desc>3624 Brooks St, Missoula, MT 59801, США</desc>
+</wpt>
+<wpt lat="44.2155392" lon="-114.9351998">
+  <ele>1909.9</ele>
+  <name>Станли Stanley</name>
+</wpt>
+<trk>
+  <name>3624 Brooks St - Станли Stanley</name>
+  <desc>407 km, 4:54</desc>
+  <trkseg>
+    <trkpt lat="46.83768" lon="-114.0363">
+      <ele>965.015</ele>
+    </trkpt>
+    <trkpt lat="46.8373" lon="-114.03735">
+      <ele>964.682</ele>
+      <course>242.1</course>
+    </trkpt>
+</trk>

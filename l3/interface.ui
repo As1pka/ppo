@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Interface</class>
+ <widget class="QMainWindow" name="Interface">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>977</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Interface</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTableWidget" name="wayTable">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>421</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>Маршрут</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Длина пути</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Время создания</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QTableWidget" name="waypointTable">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>210</y>
+      <width>271</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>lat</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>lon</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>alt</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QTextEdit" name="polylineWay">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>210</y>
+      <width>371</width>
+      <height>381</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>600</y>
+      <width>651</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Polyline для импорта</string>
+    </property>
+    <widget class="QTextEdit" name="inputPolyline">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>651</width>
+       <height>51</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QCustomPlot" name="altGraph" native="true">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>10</y>
+      <width>521</width>
+      <height>191</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="wayInfo">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>210</y>
+      <width>301</width>
+      <height>461</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>977</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="forFile">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="openFile"/>
+   </widget>
+   <widget class="QMenu" name="forRoute">
+    <property name="title">
+     <string>Маршрут</string>
+    </property>
+    <addaction name="addWayRoute"/>
+    <addaction name="addPolylineRoute"/>
+    <addaction name="delRoute"/>
+   </widget>
+   <widget class="QMenu" name="forPoint">
+    <property name="title">
+     <string>Точка</string>
+    </property>
+    <addaction name="addPoint"/>
+    <addaction name="delPoint"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Действия</string>
+    </property>
+    <addaction name="undo"/>
+    <addaction name="redo"/>
+   </widget>
+   <addaction name="forFile"/>
+   <addaction name="forRoute"/>
+   <addaction name="forPoint"/>
+   <addaction name="menu"/>
+  </widget>
+  <action name="openFile">
+   <property name="text">
+    <string>Открыть</string>
+   </property>
+   <property name="toolTip">
+    <string>Cntrl + O</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="addWayRoute">
+   <property name="text">
+    <string>Добавить маршрут</string>
+   </property>
+  </action>
+  <action name="addPoint">
+   <property name="text">
+    <string>Добавить точку в маршрут</string>
+   </property>
+  </action>
+  <action name="delRoute">
+   <property name="text">
+    <string>Удалить маршрут</string>
+   </property>
+  </action>
+  <action name="delPoint">
+   <property name="text">
+    <string>Удалить точку из маршрута</string>
+   </property>
+  </action>
+  <action name="addPolylineRoute">
+   <property name="text">
+    <string>Импорт маршрута из Polyline</string>
+   </property>
+  </action>
+  <action name="undo">
+   <property name="text">
+    <string>Отменить</string>
+   </property>
+  </action>
+  <action name="redo">
+   <property name="text">
+    <string>Повторить</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
